@@ -19,6 +19,7 @@ bool check(string s){
 		freq[s[i]]++;
 		//cout<<freq[s[i]]<<" ";
 		if(freq[s[i]] > 3){
+			
 			return true;
 		}
 	}

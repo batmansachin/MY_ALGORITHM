@@ -12,12 +12,21 @@ int main(void){
 			scanf("%d",&arr[i]);
 		}
 		scanf("%d",&p);
-		int count = 1;
+		int ans = 1;
+		int count = 0;
 		int c = 0;
 		for(int i = 1;i<n;i++){
-			c += (arr[i-1]-arr[i]);
+			count = (arr[i-1]-arr[i])
+			if(count <= 0){
+				ans += (1 - count);
+				count = 1;
+			}
+			
 		}
-		cout<<(count+c)*p<<endl;
+		if(count<0){
+			ans += count;
+		}
+		cout<<(ans)*p<<endl;
 	}
 
 	return 0;
